@@ -3,106 +3,278 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Imam Sanghaar Chandio - Portfolio</title>
+    <title>Imam Sanghaar Chandio - Web Developer</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <!-- Scroll Progress -->
+    <div class="scroll-indicator">
+      <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
 
-    <section id="home">
+    <!-- Navigation -->
+    <nav id="navbar">
       <div class="container">
-        <h1>Imam Sanghaar Chandio</h1>
-        <p>I'm a <span class="typing"></span></p>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          I am a passionate Frontend Developer and AI enthusiast, currently
-          expanding my skills in web programming and robotics. I am dedicated to
-          creating innovative and intelligent solutions.
-        </p>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="container">
-        <h2>Education</h2>
-        <div class="education-item">
-          <h3>Web Programming with Python and JavaScript</h3>
-          <p>Harvard CS50W</p>
-        </div>
-        <div class="education-item">
-          <h3>Agent and Robotic AI</h3>
-          <p>PIAIC</p>
+        <div class="nav-content">
+          <a href="#" class="logo">ISC</a>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <section id="contact">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+      </div>
       <div class="container">
-        <h2>Contact Me</h2>
-        <p>
-          You can reach me at
-          <a
-            href="https://mail.google.com/mail/?view=cm&to=imamsanghaar@gmail.com"
-            target="_blank"
-            >imamsanghaar@gmail.com</a
-          >
-        </p>
+        <div class="hero-content">
+          <h1>Hello, I'm Imam Sanghaar Chandio</h1>
+          <div class="subtitle">
+            <span id="typing-text"></span>
+          </div>
+          <p>
+            Passionate about web development and artificial intelligence.
+            Currently learning from Harvard CS50W and pursuing Agentic & Robotic
+            AI at PIAIC. Building the future, one line of code at a time.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm a passionate developer on an exciting journey through the
+              world of web programming and artificial intelligence. My
+              dedication to learning and creating innovative solutions drives me
+              every day.
+            </p>
+            <p>
+              Currently immersed in Harvard's CS50W course, I'm mastering the
+              fundamentals of web development with Python and JavaScript.
+              Simultaneously, I'm exploring the cutting-edge field of Agentic
+              and Robotic AI through PIAIC's comprehensive program.
+            </p>
+            <p>
+              I believe in continuous learning and staying updated with the
+              latest technologies to build solutions that make a real
+              difference.
+            </p>
+          </div>
+          <div class="skills">
+            <div class="skill-card">
+              <h4>Frontend</h4>
+              <p>HTML, CSS, JavaScript</p>
+            </div>
+
+            <div class="skill-card">
+              <h4>AI/ML</h4>
+              <p>Machine Learning, Neural Networks</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Education Section -->
+    <section class="education" id="education">
+      <div class="container">
+        <h2 class="section-title">Education & Learning</h2>
+        <div class="education-grid">
+          <div class="education-card">
+            <h3>CS50W - Web Programming with Python and JavaScript</h3>
+            <h4>Harvard University (Online)</h4>
+            <p>
+              Comprehensive web development course covering Python, JavaScript,
+              SQL, Django, React, and more. Learning to build scalable,
+              user-friendly web applications.
+            </p>
+            <div style="margin-top: 1rem">
+              <strong>Topics:</strong> HTML/CSS, Python, JavaScript, SQL,
+              Django, React, Git, Testing
+            </div>
+          </div>
+          <div class="education-card">
+            <h3>Agentic and Robotic AI</h3>
+            <h4>PIAIC (Presidential Initiative for Artificial Intelligence)</h4>
+            <p>
+              Advanced program focusing on cutting-edge AI technologies,
+              autonomous agents, and robotic systems. Exploring the future of
+              intelligent automation.
+            </p>
+            <div style="margin-top: 1rem">
+              <strong>Topics:</strong> AI Agents, Robotics, Machine Learning,
+              Deep Learning, Automation
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fa-solid fa-file-contract"></i>
+              <!-- Admission Form -->
+            </div>
+            <div class="project-content">
+              <h3>Admission Form</h3>
+              <p>An Admission Form for Degree College Ghotki</p>
+              <strong>Tech Stack:</strong> Html & CSS
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fa-solid fa-robot"></i>
+              <!-- Welcome Web Page -->
+            </div>
+            <div class="project-content">
+              <h3>Welcome Web Page</h3>
+              <p>A welcome page for quest academy larkana.</p>
+              <strong>Tech Stack:</strong> HTML and CSS
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fa-solid fa-calculator"></i>
+              <!-- Digital Calculator -->
+            </div>
+            <div class="project-content">
+              <h3>Digital Calculator</h3>
+              <p>Interactive and simple calculator used to do calculations</p>
+              <strong>Tech Stack:</strong> HTML mainly
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your message here..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h3>Let's Connect!</h3>
+            <p>
+              I'm always excited to collaborate on new projects and discuss
+              innovative ideas. Feel free to reach out through any of the
+              platforms below!
+            </p>
+
+            <div class="social-icons">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=imamsanghaar@gmail.com"
+                class="social-icon gmail"
+                title="Gmail"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a
+                href="https://wa.me/923441323835"
+                class="social-icon whatsapp"
+                title="WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a
+                href="https://instagram.com/imsanghaar"
+                class="social-icon instagram"
+                title="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://facebook.com/Imam Sanghaar Chandio"
+                class="social-icon facebook"
+                title="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a
+                href="https://github.com/imsanghaar"
+                class="social-icon github"
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-      <div class="footer-icons">
-        <a
-          href="https://www.facebook.com/profile.php?id=61556981875577"
-          target="_blank"
-          aria-label="Facebook"
-        >
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a
-          href="https://github.com/imsanghaar"
-          target="_blank"
-          aria-label="GitHub"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-        <a
-          href="https://wa.me/923441323835"
-          target="_blank"
-          aria-label="WhatsApp"
-        >
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a
-          href="https://www.instagram.com/imsanghaar"
-          target="_blank"
-          aria-label="Instagram"
-        >
-          <i class="fab fa-instagram"></i>
-        </a>
+      <div class="container">
+        <p>&copy; 2025 ISC | ALl rights reserved.</p>
       </div>
-      <p>&copy; 2025 Imam Sanghaar Chandio</p>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
