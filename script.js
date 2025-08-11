@@ -1,111 +1,126 @@
-      // Scroll progress indicator
-      window.addEventListener("scroll", () => {
-        const scrollTop = window.pageYOffset;
-        const docHeight = document.body.offsetHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
-        document.getElementById("scrollProgress").style.width =
-          scrollPercent + "%";
+// Certificate Slideshow Functionality
+let slideIndex = 1;
+showSlide(slideIndex);
+
+function changeSlide(n) {
+  showSlide((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlide((slideIndex = n));
+}
+
+function showSlide(n) {
+  const slides = document.getElementsByClassName("slide");
+  const dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+
+  slides[slideIndex - 1].classList.add("active");
+  dots[slideIndex - 1].classList.add("active");
+}
+
+// Auto-play slideshow
+setInterval(function () {
+  changeSlide(1);
+}, 5000);
+
+// Loading Screen
+window.addEventListener("load", function () {
+  const loadingScreen = document.getElementById("loadingScreen");
+  setTimeout(() => {
+    loadingScreen.style.opacity = "0";
+    setTimeout(() => {
+      loadingScreen.style.display = "none";
+    }, 500);
+  }, 2000);
+});
+
+// Navbar scroll effect
+window.addEventListener("scroll", function () {
+  const navbar = document.getElementById("navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
+    }
+  });
+});
 
-      // Navbar background change on scroll
-      window.addEventListener("scroll", () => {
-        const navbar = document.getElementById("navbar");
-        if (window.scrollY > 100) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-      });
+// Add intersection observer for animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px",
+};
 
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        });
-      });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.style.animation = "fadeInUp 1s ease forwards";
+    }
+  });
+}, observerOptions);
 
-      // Form submission
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
+// Observe all sections
+document.querySelectorAll(".section").forEach((section) => {
+  observer.observe(section);
+});
 
-          // Get form data
-          const formData = new FormData(this);
-          const name = formData.get("name");
-          const email = formData.get("email");
-          const message = formData.get("message");
+// Add some interactive elements
+document.querySelectorAll(".skill-card, .contact-card").forEach((card) => {
+  card.addEventListener("mouseenter", function () {
+    this.style.transform = "translateY(-10px) scale(1.05)";
+  });
 
-          // Simple validation
-          if (name && email && message) {
-            // Simulate form submission
-            const submitBtn = this.querySelector(".submit-btn");
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = "Sending...";
-            submitBtn.disabled = true;
+  card.addEventListener("mouseleave", function () {
+    this.style.transform = "translateY(0) scale(1)";
+  });
+});
 
-            setTimeout(() => {
-              alert("Thank you for your message! I'll get back to you soon.");
-              this.reset();
-              submitBtn.textContent = originalText;
-              submitBtn.disabled = false;
-            }, 2000);
-          }
-        });
+// Add typing effect to hero subtitle
+const subtitle = document.querySelector(".hero-subtitle");
+const text = subtitle.textContent;
+subtitle.textContent = "";
 
-      // Add intersection observer for animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
+setTimeout(() => {
+  let i = 0;
+  const typeWriter = () => {
+    if (i < text.length) {
+      subtitle.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 100);
+    }
+  };
+  typeWriter();
+}, 3000);
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.animation = "fadeInUp 0.8s ease forwards";
-          }
-        });
-      }, observerOptions);
-
-      // Observe all cards and sections
-      document
-        .querySelectorAll(".skill-card, .education-card, .project-card")
-        .forEach((card) => {
-          observer.observe(card);
-        });
-
-      // Add mouse move effect for 3D tilt
-      document
-        .querySelectorAll(".project-card, .skill-card, .education-card")
-        .forEach((card) => {
-          card.addEventListener("mousemove", (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const rotateX = (y - centerY) / 10;
-            const rotateY = (centerX - x) / 10;
-
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
-          });
-
-          card.addEventListener("mouseleave", () => {
-            card.style.transform =
-              "perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)";
-          });
-        });
-
-      const texts = [
+ const texts = [
         "Web Developer",
         "AI Enthusiast",
         "Problem Solver",

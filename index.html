@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Imam Sanghaar Chandio - Web Developer</title>
+    <title>Imam Sanghaar Chandio - Web Developer & AI Enthusiast</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -11,158 +11,348 @@
     />
   </head>
   <body>
-    <!-- Scroll Progress -->
-    <div class="scroll-indicator">
-      <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Robotic Background -->
+    <div class="robot-bg">
+      <div class="robot">🤖</div>
+      <div class="robot">🚀</div>
+      <div class="robot">⚙️</div>
+      <div class="robot">🔧</div>
     </div>
 
     <!-- Navigation -->
     <nav id="navbar">
-      <div class="container">
-        <div class="nav-content">
-          <a href="#" class="logo">ISC</a>
-          <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
+      <div class="nav-container">
+        <div class="logo">ISC</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#roadmap">Journey</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-      <div class="floating-shapes">
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-      </div>
-      <div class="container">
-        <div class="hero-content">
-          <h1>Hello, I'm Imam Sanghaar Chandio</h1>
-          <div class="subtitle">
-            <span id="typing-text"></span>
-          </div>
-          <p>
-            Passionate about web development and artificial intelligence.
-            Currently learning from Harvard CS50W and pursuing Agentic & Robotic
-            AI at PIAIC. Building the future, one line of code at a time.
-          </p>
+      <div class="hero-content">
+        <h1>Hello, I am Imam Sanghaar Chandio</h1>
+        <p class="hero-subtitle">Web Developer & AI Enthusiast</p>
+        <p>Learning Web Programming from Harvard CS50W</p>
+        <p>Studying Agentic and Robotic AI from PIAIC</p>
+        <div>
+          <a href="#about" class="cta-button">Explore My Work</a>
         </div>
       </div>
     </section>
+
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="section" id="about">
       <div class="container">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
+          <div class="profile-image-container">
+            <!-- Replace with your actual profile picture -->
+            <img
+              src="profile.jpg"
+              alt="Your Profile Picture"
+              class="profile-image"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="profile-placeholder" style="display: none">
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
           <div class="about-text">
             <p>
-              I'm a passionate developer on an exciting journey through the
-              world of web programming and artificial intelligence. My
-              dedication to learning and creating innovative solutions drives me
-              every day.
+              Welcome to my digital space! I'm a passionate coder on an exciting
+              journey of technological discovery. Currently immersing myself in
+              the comprehensive world of web programming through Harvard's
+              prestigious CS50W course, where I'm mastering the intricacies of
+              modern web development.
             </p>
+
             <p>
-              Currently immersed in Harvard's CS50W course, I'm mastering the
-              fundamentals of web development with Python and JavaScript.
-              Simultaneously, I'm exploring the cutting-edge field of Agentic
-              and Robotic AI through PIAIC's comprehensive program.
+              Simultaneously, I'm exploring the cutting-edge frontier of Agentic
+              and Robotic AI through PIAIC's innovative program. This dual focus
+              allows me to blend traditional web development skills with the
+              revolutionary potential of artificial intelligence and robotics.
             </p>
+
             <p>
-              I believe in continuous learning and staying updated with the
-              latest technologies to build solutions that make a real
-              difference.
+              I believe in the power of technology to transform ideas into
+              reality, and I'm committed to building solutions that make a
+              meaningful impact. Every line of code I write is a step towards
+              creating a more connected and intelligent future.
             </p>
           </div>
-          <div class="skills">
-            <div class="skill-card">
-              <h4>Frontend</h4>
-              <p>HTML, CSS, JavaScript</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coding Journey Roadmap Section -->
+    <section class="section" id="roadmap">
+      <div class="container">
+        <h2 class="section-title">My Coding Journey</h2>
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 50px">
+          From robotics to AI - A journey of continuous learning and growth
+        </p>
+        <div class="roadmap-timeline">
+          <div class="roadmap-item">
+            <div class="roadmap-year">2019</div>
+            <div class="roadmap-content">
+              <div class="roadmap-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3 class="roadmap-title">The Beginning - Edvon Robotics</h3>
+              <p class="roadmap-description">
+                My coding journey began at Edvon Robotics, where I discovered
+                the magical world of programming through Scratch. This visual
+                programming language introduced me to fundamental concepts like
+                loops, conditions, and logical thinking. I learned to create
+                interactive stories, animations, and simple games while
+                developing problem-solving skills that would become the
+                foundation of my programming career.
+              </p>
+              <div class="roadmap-skills">
+                <span class="skill-tag">Scratch Programming</span>
+                <span class="skill-tag">Logic Building</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Creative Thinking</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-item">
+            <div class="roadmap-year">2023</div>
+            <div class="roadmap-content">
+              <div class="roadmap-icon">
+                <i class="fas fa-gamepad"></i>
+              </div>
+              <h3 class="roadmap-title">
+                Game Development Era - GameMaker Engine
+              </h3>
+              <p class="roadmap-description">
+                After mastering the basics, I ventured into the exciting world
+                of game development with GameMaker Engine. This marked a
+                significant leap from visual programming to actual scripting. I
+                learned GML (GameMaker Language), understanding concepts like
+                object-oriented programming, sprite management, physics, and
+                game mechanics. This experience taught me about project
+                architecture and the importance of clean, maintainable code.
+              </p>
+              <div class="roadmap-skills">
+                <span class="skill-tag">GameMaker Language (GML)</span>
+                <span class="skill-tag">Game Design</span>
+                <span class="skill-tag">Object-Oriented Programming</span>
+                <span class="skill-tag">Physics Implementation</span>
+                <span class="skill-tag">Project Management</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-item">
+            <div class="roadmap-year">2025</div>
+            <div class="roadmap-content">
+              <div class="roadmap-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3 class="roadmap-title">
+                Full Stack Web Development - Harvard CS50W
+              </h3>
+              <p class="roadmap-description">
+                Currently immersed in Harvard's comprehensive CS50W program,
+                learning the complete web development stack. From frontend
+                technologies like HTML, CSS, and JavaScript to backend
+                frameworks and database management. This rigorous course is
+                expanding my understanding of scalable web applications,
+                security practices, and modern development workflows.
+              </p>
+              <div class="roadmap-skills">
+                <span class="skill-tag">HTML5 & CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Django</span>
+                <span class="skill-tag">SQL,Models, Migration</span>
+                <span class="skill-tag">user Interface</span>
+                <span class="skill-tag">Scalability</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-item">
+            <div class="roadmap-year">2025</div>
+            <div class="roadmap-content">
+              <div class="roadmap-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3 class="roadmap-title">
+                AI Revolution - PIAIC Agentic & Robotic AI
+              </h3>
+              <p class="roadmap-description">
+                Simultaneously pursuing cutting-edge AI education through
+                PIAIC's Agentic and Robotic AI program. Exploring the frontiers
+                of artificial intelligence, learning about autonomous agents,
+                machine learning algorithms, and robotic systems. This dual
+                focus is preparing me for the future of technology where web
+                development meets intelligent automation.
+              </p>
+              <div class="roadmap-skills">
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Agentic AI</span>
+                <span class="skill-tag">Robotics Programming</span>
+                <span class="skill-tag">Neural Networks</span>
+                <span class="skill-tag">Computer Vision</span>
+                <span class="skill-tag">Natural Language Processing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="fab fa-html5"></i>
+            <h3>Frontend Development</h3>
+            <p>
+              HTML5, CSS, JavaScript, Responsive Design, User Interface, Git Version,
+              Django, SQl etc.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-server"></i>
+            <h3>Backend Development</h3>
+            <p>
+              Django, React etc.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-robot"></i>
+            <h3>AI & Robotics</h3>
+            <p>
+              Agentic AI systems, Robotic programming, Machine learning
+              fundamentals through PIAIC program
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fab fa-python"></i>
+            <h3>Programming Languages</h3>
+            <p>
+              HTML, CSS, Javascript, Django
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-database"></i>
+            <h3>Database Management</h3>
+            <p>
+              SQL, Database design, Data modeling for web applications and AI
+              systems
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-code-branch"></i>
+            <h3>Version Control</h3>
+            <p>
+              Git, GitHub, Collaborative development practices for team projects
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="section" id="certificates">
+      <div class="container">
+        <h2 class="section-title">Certificates & Achievements</h2>
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 30px">
+          A showcase of my learning milestones and accomplishments
+        </p>
+
+
+
+            <!-- Add more slides here for actual certificate images -->
+
+            <div class="slide">
+                <img src="certificate.jpg" alt="Certificate 1" class="certificate-image">
             </div>
 
-            <div class="skill-card">
-              <h4>AI/ML</h4>
-              <p>Machine Learning, Neural Networks</p>
-            </div>
-          </div>
+          <p
+            style="
+              text-align: center;
+              margin-top: 20px;
+              font-size: 0.9rem;
+              opacity: 0.8;
+            "
+          >
+            <i class="fas fa-info-circle"></i>
+
+          </p>
         </div>
       </div>
     </section>
 
     <!-- Education Section -->
-    <section class="education" id="education">
+    <section class="section" id="education">
       <div class="container">
         <h2 class="section-title">Education & Learning</h2>
-        <div class="education-grid">
-          <div class="education-card">
-            <h3>CS50W - Web Programming with Python and JavaScript</h3>
-            <h4>Harvard University (Online)</h4>
-            <p>
-              Comprehensive web development course covering Python, JavaScript,
-              SQL, Django, React, and more. Learning to build scalable,
-              user-friendly web applications.
-            </p>
-            <div style="margin-top: 1rem">
-              <strong>Topics:</strong> HTML/CSS, Python, JavaScript, SQL,
-              Django, React, Git, Testing
+        <div class="education-timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content">
+              <h3>Harvard CS50W - Web Programming</h3>
+              <p><strong>Currently Enrolled</strong></p>
+              <p>
+                Comprehensive web development program covering frontend and
+                backend technologies, database management, and modern web
+                application architecture. Learning industry-standard practices
+                and building real-world projects.
+              </p>
             </div>
           </div>
-          <div class="education-card">
-            <h3>Agentic and Robotic AI</h3>
-            <h4>PIAIC (Presidential Initiative for Artificial Intelligence)</h4>
-            <p>
-              Advanced program focusing on cutting-edge AI technologies,
-              autonomous agents, and robotic systems. Exploring the future of
-              intelligent automation.
-            </p>
-            <div style="margin-top: 1rem">
-              <strong>Topics:</strong> AI Agents, Robotics, Machine Learning,
-              Deep Learning, Automation
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-      <div class="container">
-        <h2 class="section-title">My Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-image">
-              <i class="fa-solid fa-file-contract"></i>
-              <!-- Admission Form -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-robot"></i>
             </div>
-            <div class="project-content">
-              <h3>Admission Form</h3>
-              <p>An Admission Form for Degree College Ghotki</p>
-              <strong>Tech Stack:</strong> Html & CSS
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image">
-              <i class="fa-solid fa-robot"></i>
-              <!-- Welcome Web Page -->
-            </div>
-            <div class="project-content">
-              <h3>Welcome Web Page</h3>
-              <p>A welcome page for quest academy larkana.</p>
-              <strong>Tech Stack:</strong> HTML and CSS
+            <div class="timeline-content">
+              <h3>PIAIC - Agentic and Robotic AI</h3>
+              <p><strong>Currently Enrolled</strong></p>
+              <p>
+                Advanced program focusing on artificial intelligence agents,
+                robotic systems, and autonomous technologies. Exploring the
+                intersection of AI and robotics to create intelligent,
+                interactive systems.
+              </p>
             </div>
           </div>
-          <div class="project-card">
-            <div class="project-image">
-              <i class="fa-solid fa-calculator"></i>
-              <!-- Digital Calculator -->
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-code"></i>
             </div>
-            <div class="project-content">
-              <h3>Digital Calculator</h3>
-              <p>Interactive and simple calculator used to do calculations</p>
-              <strong>Tech Stack:</strong> HTML mainly
+            <div class="timeline-content">
+              <h3>Self-Directed Learning</h3>
+              <p><strong>Ongoing</strong></p>
+              <p>
+                Continuous learning through online resources, coding challenges,
+                and personal projects. Staying updated with latest technologies
+                and best practices in web development and AI.
+              </p>
             </div>
           </div>
         </div>
@@ -170,109 +360,68 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="section" id="contact">
       <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-          <div class="contact-form">
-            <form id="contactForm">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="your@email.com"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  placeholder="Your message here..."
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-          </div>
-          <div class="contact-info">
-            <h3>Let's Connect!</h3>
-            <p>
-              I'm always excited to collaborate on new projects and discuss
-              innovative ideas. Feel free to reach out through any of the
-              platforms below!
-            </p>
+        <h2 class="section-title">Let's Connect</h2>
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 30px">
+          Ready to collaborate or just want to say hello? Reach out through any
+          of these platforms!
+        </p>
+        <div class="contact-grid">
+          <a href="mailto:imamsanghaar@gmail.com" class="contact-card gmail">
+            <i class="fas fa-envelope"></i>
+            <h3>Gmail</h3>
+            <p>Gmail Me</p>
+          </a>
 
-            <div class="social-icons">
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=imamsanghaar@gmail.com"
-                class="social-icon gmail"
-                title="Gmail"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-              <a
-                href="https://wa.me/923441323835"
-                class="social-icon whatsapp"
-                title="WhatsApp"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-whatsapp"></i>
-              </a>
-              <a
-                href="https://instagram.com/imsanghaar"
-                class="social-icon instagram"
-                title="Instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a
-                href="https://facebook.com/Imam Sanghaar Chandio"
-                class="social-icon facebook"
-                title="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-facebook"></i>
-              </a>
-              <a
-                href="https://github.com/imsanghaar"
-                class="social-icon github"
-                title="GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
-          </div>
+          <a
+            href="923441323835"
+            class="contact-card whatsapp"
+            target="_blank"
+          >
+            <i class="fab fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+            <p>Quick Messages</p>
+          </a>
+
+          <a
+            href="https://instagram.com/imsanghaar"
+            class="contact-card instagram"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i>
+            <h3>Instagram</h3>
+            <p>DM ME</p>
+          </a>
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61556981875577"
+            class="contact-card facebook"
+            target="_blank"
+          >
+            <i class="fab fa-facebook"></i>
+            <h3>Facebook</h3>
+            <p>Connect & Follow</p>
+          </a>
+
+          <a
+            href="https://github.com/imsanghaar"
+            class="contact-card github"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i>
+            <h3>GitHub</h3>
+            <p>View My Code</p>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <div class="container">
-        <p>&copy; 2025 ISC | ALl rights reserved.</p>
+      <div class="footer-content">
+        <p>&copy; 2025 ISC | All rights reserved.</p>
+        <p>Built with passion</p>
       </div>
     </footer>
     <script src="script.js"></script>
